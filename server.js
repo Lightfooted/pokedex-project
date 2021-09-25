@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
+
 //Middle-ware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +21,10 @@ const routes = require('./routes');
 
 app.use(routes);
 
+app.use("/dashboard-routes", dashboardRoutes);
+app.use("/home-routes", homeRoutes);
+
+//listener
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening!'));
 }); 

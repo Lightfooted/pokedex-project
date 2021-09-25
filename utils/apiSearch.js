@@ -12,82 +12,137 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//pokemon api 
-var PokeApi = require('pokeapi');
-var api = PokeApi.v1();
+// //pokemon api 
+// var PokeApi = require('pokeapi');
+// var api = PokeApi.v1();
 
-api.get('pokemon', 1).then(function(bulbasaur) {
-    console.log("Here's Bulbasaur:", bulbasaur);
-	api.get(bulbasaur.moves).then(function(moves) {
-	    console.log("Full move list:" + moves);
-    })
-}, function(err) {
-    console.log('ERROR', err);
-});
+// api.get('pokemon', 1).then(function(bulbasaur) {
+//     console.log("Here's Bulbasaur:", bulbasaur);
+// 	api.get(bulbasaur.moves).then(function(moves) {
+// 	    console.log("Full move list:" + moves);
+//     })
+// }, function(err) {
+//     console.log('ERROR', err);
+// });
 
-function renderEverything(){
-  let allPokemonContainer = document.querySelector('#poke-container')
-  allPokemonContainer.innerText = "";
-  fetchKantoPokemon();
-}
+// function renderEverything(){
+//   let allPokemonContainer = document.querySelector('#poke-container')
+//   allPokemonContainer.innerText = "";
+//   fetchKantoPokemon();
+// }
 
-//fetches the original 151 pokemon 
-function fetchKantoPokemon(){
-  fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-  .then(response => response.json())
-  .then(function(allpokemon){
-      allpokemon.results.forEach(function(pokemon){
-          fetchPokemonData(pokemon);
-      })
-  })
-}
+// //fetches the original 151 pokemon 
+// function fetchKantoPokemon(){
+//   fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+//   .then(response => response.json())
+//   .then(function(allpokemon){
+//       allpokemon.results.forEach(function(pokemon){
+//           fetchPokemonData(pokemon);
+//       })
+//   })
+// }
 
-   function fetchPokemonData(pokemon){
-    let url = pokemon.url // <--- this is saving the pokemon url to a      variable to us in a fetch.(Ex: https://pokeapi.co/api/v2/pokemon/1/)
-      fetch(url)
-      .then(response => response.json())
-      .then(function(pokeData){
-        renderPokemon(pokeData)
-      })
-    }
+//    function fetchPokemonData(pokemon){
+//     let url = pokemon.url // <--- this is saving the pokemon url to a      variable to us in a fetch.(Ex: https://pokeapi.co/api/v2/pokemon/1/)
+//       fetch(url)
+//       .then(response => response.json())
+//       .then(function(pokeData){
+//         renderPokemon(pokeData)
+//       })
+//     }
 
-    function renderPokemon(pokeData){
-        let allPokemonContainer = document.getElementById('poke-container');
-        let pokeContainer = document.createElement("div") //div will be used to hold the data/details for indiviual pokemon.{}
-        let pokeName = document.createElement('h4')
-        pokeName.innerText = pokeData.name
-        let pokeNumber = document.createElement('p')
-        pokeNumber.innerText = `#${pokeData.id}`
-        let pokeTypes = document.createElement('ul') 
-        //ul list will hold the pokemon types
-        createTypes(pokeData.types, pokeTypes) 
-        // helper function to go through the types array and create li tags for each one
-        pokeContainer.append(pokeName, pokeNumber, pokeTypes);   
-        //appending all details to the pokeContainer div
-        allPokemonContainer.appendChild(pokeContainer);       
-        //appending that pokeContainer div to the main div which willhold all the pokemon cards
-        }
+//     function renderPokemon(pokeData){
+//         let allPokemonContainer = document.getElementById('poke-container');
+//         let pokeContainer = document.createElement("div") //div will be used to hold the data/details for indiviual pokemon.{}
+//         let pokeName = document.createElement('h4')
+//         pokeName.innerText = pokeData.name
+//         let pokeNumber = document.createElement('p')
+//         pokeNumber.innerText = `#${pokeData.id}`
+//         let pokeTypes = document.createElement('ul') 
+//         //ul list will hold the pokemon types
+//         createTypes(pokeData.types, pokeTypes) 
+//         // helper function to go through the types array and create li tags for each one
+//         pokeContainer.append(pokeName, pokeNumber, pokeTypes);   
+//         //appending all details to the pokeContainer div
+//         allPokemonContainer.appendChild(pokeContainer);       
+//         //appending that pokeContainer div to the main div which willhold all the pokemon cards
+//         }
 
-        function createTypes(types, ul){
-            types.forEach(function(type){
-            let typeLi = document.createElement('li');
-            typeLi.innerText = type['type']['name'];
-            ul.append(typeLi)
-            })
-          }
+//         function createTypes(types, ul){
+//             types.forEach(function(type){
+//             let typeLi = document.createElement('li');
+//             typeLi.innerText = type['type']['name'];
+//             ul.append(typeLi)
+//             })
+//           }
 
-       //This will generate picture for pokemon want to look into different picture options  
+//        //This will generate picture for pokemon want to look into different picture options  
           
-       function createPokeImage(pokeID, containerDiv){
-        let pokeImgContainer = document.createElement('div')
-        pokeImgContainer.classList.add('image')
+//        function createPokeImage(pokeID, containerDiv){
+//         let pokeImgContainer = document.createElement('div')
+//         pokeImgContainer.classList.add('image')
     
-        let pokeImage = document.createElement('img')
-        pokeImage.srcset = `https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`
+//         let pokeImage = document.createElement('img')
+//         pokeImage.srcset = `https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`
     
-        pokeImgContainer.append(pokeImage);
-        containerDiv.append(pokeImgContainer);
-    }
+//         pokeImgContainer.append(pokeImage);
+//         containerDiv.append(pokeImgContainer);
+//     }
+
+
+//plays pokemon song when page loads 
+window.onload=function(){
+  document.getElementById("my_audio").play();
+}
+
+
+const pokedex = document.getElementById('pokedex');
+
+const fetchPokemon = () => {
+  const promises = [];
+  for (let i = 1; i <= 150; i++) {
+      const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+      promises.push(fetch(url).then((res) => res.json()));
+  }
+  Promise.all(promises).then((results) => {
+      const pokemon = results.map((result) => ({
+          name: result.name,
+          image: result.sprites['front_default'],
+          type: result.types.map((type) => type.type.name).join(', '),
+          id: result.id
+      }));
+      displayPokemon(pokemon);
+  });
+};
+
+const displayPokemon = (pokemon) => {
+  console.log(pokemon);
+  const pokemonHTMLString = pokemon
+      .map(
+          (pokeman) => `
+      <li class="card">
+          <img class="card-image" src="${pokeman.image}"/>
+          <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
+          <p class="card-subtitle">Type: ${pokeman.type}</p>
+      </li>
+  `
+      )
+      .join('');
+  pokedex.innerHTML = pokemonHTMLString;
+};
+
+fetchPokemon();
+
+
+
+
+
+
+
+
+
+
+
 
     // sync sequelize models to the database, then turn on the server
     sequelize.sync({ force: false}).then(() => {
