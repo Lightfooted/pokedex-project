@@ -1,0 +1,71 @@
+{{!-Home page. Navigation--}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2</title>
+  {{!--favicom--}}
+  <link rel="icon" href="file:///Users/brookemadison/Downloads/Untitled%20design.svg">
+  {{!--bootstrap--}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  {{!--poppins font--}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  {{!--pokemon font--}}
+  <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet"
+    type="text/css" />
+  {{!--css-stylesheet--}}
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            {{!--pokéball home icon and page title--}}
+            <link rel="icon" href="file:///Users/brookemadison/Downloads/Untitled%20design.svg">Pokédex
+          </a>
+          {{!--search bar--}}
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search For a Pokemon.." aria-label="Search">
+            <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+            {{!--account icon for login/ logout and dashboard --}}
+            {{#if loggedIn}}
+            <a href="/dashboard">dashboard</a>
+            <button id="logout" class="account-btn"> <i class="bi bi-person-circle"></i></button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+       {{!--card image and text.. this is where the pokemon pictures, name, and description will be located--}}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{image}}" alt="Card image cap">{{#items}}
+        <div class="card-body">{{title}}
+          <p class="card-text">{{{description}}}</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

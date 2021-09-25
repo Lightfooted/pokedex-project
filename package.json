@@ -1,0 +1,33 @@
+{
+  "name": "poke-project",
+  "version": "1.0.0",
+  "description": "## About After logging into the app, the user will pick a pokemon from the list to use as a fighter. They will then proceed to fight opponent pokemon.",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.0",
+    "pokeapi": "0.0.1",
+    "sequelize": "^5.22.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seeds": "node seeds/index.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micahlanham/poke-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micahlanham/poke-project/issues"
+  },
+  "homepage": "https://github.com/micahlanham/poke-project#readme"
+}
