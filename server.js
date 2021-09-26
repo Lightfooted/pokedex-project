@@ -16,7 +16,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 //Routes
-const routes = require('./routes');
+const routes = require('./controllers/');
 
 app.use(routes);
 
