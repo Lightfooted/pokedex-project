@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +21,7 @@
   {{!--css-stylesheet--}}
   <link rel="stylesheet" href="/stylesheets/style.css">
   {{!--Link to JS file--}}
-<script src="/js/index.js"
+<script src="/js/index.js"></script>
 </head>
 
 <body>
@@ -42,16 +43,14 @@
         </div>
       </nav>
     </header>
-
     <main>
       {{{ body }}}
     </main>
-    
     <footer>
       <p> Made by Kimberly Collazo and Brooke Madison </p>
     </footer>
   </div>
-
+  
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
