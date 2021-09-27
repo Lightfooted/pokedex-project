@@ -1,5 +1,19 @@
 //Need to tinker with.
 
+
+//for sign in / create account form 
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
 async function loginFormHandler(event) {
     event.preventDefault();
   
@@ -53,3 +67,4 @@ async function loginFormHandler(event) {
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);  
+
