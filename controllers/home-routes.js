@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
       'name',
       'height',
       'weight',
-      'font_default',
+      'front_default',
       'entry_number',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM user_pokemon WHERE pokemon.id = user_pokemon.pokemon_id)'), 'collected_pokemon']
@@ -34,7 +34,8 @@ router.get('/', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username'],
+        as: 'collected_pokemon'
       }
     ]
   })
@@ -71,7 +72,8 @@ router.get('/pokemon/:id', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username'],
+        as: 'collected_pokemon'
       }
     ]
   })
