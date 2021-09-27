@@ -29,7 +29,7 @@
   <div class="wrapper">
     <header>
       <div class="topnav">
-        <a class="active" href="#home"> <img
+        <a class="active" href="/home"> <img
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" /></a>
         <div class="search-container">
           <input type="text" placeholder="Search For a Pokemon.." name="search">
@@ -58,6 +58,9 @@
     </footer>
   </div>
 
+ {{!--this will play pokemon song on page load--}}
+ <audio src="https://vgmsite.com/soundtracks/pokemon-gameboy-sound-collection/twanajhe/102-palette%20town%20theme.mp3" id="my_audio" loop="loop"></audio>
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
@@ -65,3 +68,6 @@
 </body>
 
 </html>
+
+
+
