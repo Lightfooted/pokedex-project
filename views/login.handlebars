@@ -1,49 +1,36 @@
-{{!-- Brooke you can change this to your liking --}}
-<head>
-   {{!--css-stylesheet--}}
-  <link rel="stylesheet" href="/stylesheets/login.css">
-</head>
-
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
-
-<form class="search/favorites">
-  <div>
-  <label for="search">Search:</label><br>
-  <input type="text" id="search" name="search"><br>
-  <label for="favorites">Favorites:</label><br>
-  <input type="text" id="Favorites" name="Favorites">
-  </div>  
-   </form>
-
-
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<span>Join the Pokémon Trainer Club!</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Create Account</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign In</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome, Trainer!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Trainer!</h1>
+				<p>Enter your personal details and join the Pokémon Trainer Club today!</p>
+				<button class="ghost" id="signUp">Create Account</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script src="/javascript/login.js"></script>

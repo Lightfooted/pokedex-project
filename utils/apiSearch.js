@@ -91,6 +91,7 @@ function createPokeImage(pokeID, containerDiv) {
   containerDiv.append(pokeImgContainer);
 }
 
+
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({
   force: false
