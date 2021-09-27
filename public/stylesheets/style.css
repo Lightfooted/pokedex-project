@@ -99,7 +99,7 @@
 }
 
 .topnav .search-container button:hover {
-	background: #ccc;
+	background: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,15 +117,16 @@
 		padding: 14px;
 	}
 	.topnav input[type=text] {
-		border: 1px solid #ccc;
+		border: 1px solid white;
 	}
 }
 
-body {
-	background-color: black;
-	color: white;
-	margin: 0;
-	font-family: 'Poppins', sans-serif;
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;    color: white;
 }
 
 .container {
@@ -139,6 +140,13 @@ h1 {
 	font-size: 54px;
 }
 
+
+h2 {
+	font-family: 'poppins'sans-serif;
+    color: white;
+}
+
+
 #pokedex {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -149,9 +157,11 @@ h1 {
 .card {
 	list-style: none;
 	padding: 40px;
-	background-color: #f4f4f4;
-	color: #222;
+    margin: 60px;
+	background-color: black;
+	color: white;
 	text-align: center;
+    border: 1px solid #ccc;
 }
 
 .card:hover {
@@ -167,7 +177,7 @@ h1 {
 
 .card-subtitle {
 	margin-top: 5px;
-	color: #666;
+	color: #B7B7CE;
 	font-weight: lighter;
 }
 
@@ -188,4 +198,13 @@ h1 {
 	100% {
 		transform: translateY(0);
 	}
+}
+
+footer {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    padding-top: 3%;
+    font-size: 110%;
 }

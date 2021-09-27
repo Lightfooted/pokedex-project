@@ -1,5 +1,12 @@
-<div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{front_default}}" alt="Card image cap">{{user.username}}
-        <div class="card-body">{{id}} {{name}}
-          <p class="card-text">{{{height}}} {{weight}} {{entry_number}}</p>
-
+<div id="pokedex">
+  <li class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item">Caught by: {{user.username}}</li>
+  <img class="card-img-top" src="{{front_default}}">
+  <h2 class="card-title">{{id}}. {{name}}</h2>
+  <p class="card-subtitle">Height: {{height}}</p>
+  <p class="card-subtitle">Weight: {{weight}}</p>
+  <p class="card-subtitle">Pokedex Entry: {{entry_number}}</p>
+</li>
+</div>
+{{!--This is the card and info that will be pushed into main.handlebars. It's a basic card so feel free to tweak it as much as you want--}}
