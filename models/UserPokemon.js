@@ -13,6 +13,7 @@ UserPokemon.init(
     },
     user_id: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
           model: 'user',
           key: 'id'
@@ -20,6 +21,7 @@ UserPokemon.init(
       },
       pokemon_id: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
           model: 'pokemon',
           key: 'id'
@@ -28,7 +30,7 @@ UserPokemon.init(
     },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user_pokemon'
