@@ -51,7 +51,7 @@
 .topnav a {
 	float: left;
 	display: block;
-	color: black;
+	color: white;
 	text-align: center;
 	padding: 10px 10px;
 	text-decoration: none;
@@ -59,7 +59,7 @@
 }
 
 .topnav a:hover {
-	color: blue;
+	color: var(--red);
 }
 
 .topnav a.active {
@@ -73,8 +73,11 @@
 .topnav input[type=text] {
 	padding: 6px;
 	margin-top: 8px;
-	font-size: 17px;
+	font-size: 15px;
 	border: none;
+	color: black;
+	background-color: white;
+	font-family: 'Poppins', sans-serif;
 }
 
 .topnav .search-container button {
@@ -83,10 +86,10 @@
 	margin-top: 8px;
 	margin-right: 16px;
 	background: #ddd;
-	font-size: 13px;
+	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
 	border: none;
-	cursor: pointer;
+	cursor: crosshair;
 	background-color: white;
 	border-left: .5px solid black;
 }
@@ -95,11 +98,11 @@
 	width: 32px;
 	height: 32px;
 	margin: 0px;
-	color: blue;
+	color:black;
 }
 
 .topnav .search-container button:hover {
-	background: white;
+	background: #ddd;
 }
 
 @media screen and (max-width: 600px) {
@@ -204,7 +207,6 @@ footer {
     border: 1px solid white;
     display: flex;
     justify-content: center;
-    padding: 1%;
-    padding-top: 3%;
+    padding-top: 1.5%;
     font-size: 110%;
 }
