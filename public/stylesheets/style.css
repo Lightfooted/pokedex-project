@@ -78,6 +78,7 @@
 	color: black;
 	background-color: white;
 	font-family: 'Poppins', sans-serif;
+	width: 190px;
 }
 
 .topnav .search-container button {
@@ -209,4 +210,43 @@ footer {
     justify-content: center;
     padding-top: 1.5%;
     font-size: 110%;
+}
+
+
+.login-form {
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	cursor: crosshair;
+	}
+
+.submit-btn {
+	color: black;
+	background-color: white;
+	border: none;
+	font-size: 15px;
+	cursor: crosshair;
+}
+
+.submit-btn button:hover {
+	background: rgb(146, 42, 42);
+}
+
+.form-header {
+float: none;
+display: block;
+text-align: center;
+width: 100%;
+margin: 0;
+padding: 14px;
+}
+
+.form-info {
+float: none;
+display: block;
+align-content: center;
+text-align: left;
+
 }

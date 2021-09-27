@@ -1,11 +1,11 @@
 {{!-- Brooke you can change this to your liking --}}
-<head>
-   {{!--css-stylesheet--}}
-  <link rel="stylesheet" href="/stylesheets/login.css">
-</head>
 
 <form class="login-form">
-  <div>
+  <div class="form-header">
+  <h2>Login</h2>
+  <p>Already registered? log in here:</p>
+  </div>
+  <div class="form-info">
     <label for="email-login">email:</label>
     <input type="text" id="email-login" />
   </div>
@@ -14,7 +14,7 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button class="submit-btn" type="submit">login</button>
   </div>
 </form>
 
@@ -29,7 +29,11 @@
 
 
 <form class="signup-form">
-  <div>
+    <div class="form-header">
+  <h2>Create an Account</h2>
+  <p>Join the Pokémon Trainer Club!</p>
+  </div>
+  <div class="form-info">
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
   </div>
@@ -42,7 +46,7 @@
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button class="submit-btn"  type="submit">sign-up</button>
   </div>
 </form>
 
