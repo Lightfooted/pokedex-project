@@ -14,6 +14,7 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
+// 
 async function loginFormHandler(event) {
     event.preventDefault();
   
