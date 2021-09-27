@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Pokemon } = require('../../models');
+const { User, Pokemon, UserPokemon } = require('../../models');
 
 //get users
 router.get('/', (req, res) => {
@@ -13,20 +13,23 @@ router.get('/', (req, res) => {
     });
 });
 
-//get username
-router.get('/:username', (req, res) => {
+//get one user
+router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
     where: {
-      username: req.params.username
+      id: req.params.id
     },
     include: [
       {
         model: Pokemon,
-        attributes: ['']
+        attributes: ['id', 'name', 'height', 'weight', 'front_default', 'entry_number', 'created_at']
       },
       {
-        
+        model: Pokemon,
+        attributes: ['name'],
+        through: UserPokemon,
+        as: 'collected_pokemon'
       }
     ]
   })
@@ -65,7 +68,7 @@ router.post('/', (req, res) => {
     });
 });
 
-//find one user
+//user login
 router.post('/login', (req, res) => {
   User.findOne({
     where: {
@@ -107,6 +110,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
+//user update
 router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,

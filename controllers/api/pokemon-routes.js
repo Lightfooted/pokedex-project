@@ -1,70 +1,126 @@
 const router = require('express').Router();
-const {
-    Pokemon
-} = require('../../models');
-
+const sequelize = require('../../config/connection')
+const { Pokemon, User, UserPokemon } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//get all pokemon
+// get all Pokemon
 router.get('/', (req, res) => {
-
-    //find all pokemon
+    console.log('======================');
     Pokemon.findAll({
-            attributes: [
-                'id',
-                'pokemon_name'
-            ]
-        })
-
-        .then(dbPokemon => res.json(Pokemon))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+      attributes: ['id', 'name', 'height', 'weight', 'front_default', 'entry_number', 'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM user_pokemon WHERE pokemon.id = user_pokemon.pokemon_id)'), 'collected_pokemon']
+    ],
+    include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+    ]
+  })
+  .then(dbPokemonData => res.json(dbPokemonData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
-//get one pokemon
-router.get('/:id', (req, res) => {
-            //find a single pokemon by its 'id'
-            Pokemon.findOne({
-                where: {
-                    id: req.params.id
-                },
-                attributes: [
-                    'id',
-                    'pokemon_name',
-                    'type'
-                ],
-                include: [{
-                    model: Type,
-                    attributes: ['type_name']
-                
-                
-            }]
-          
-});
+  //get a single pokemon
+  router.get('/:id', (req, res) => {
+    Pokemon.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: ['id', 'name', 'height', 'weight', 'front_default', 'entry_number', 'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM user_pokemon WHERE pokemon.id = user_pokemon.pokemon_id)'), 'collected_pokemon']
+    ],
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPokemonData => {
+        if (!dbPokemonData) {
+          res.status(404).json({ message: 'No Pokemon found with this id' });
+          return;
+        }
+        res.json(dbPokemonData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
-            //delete pokemon
-            router.delete('/:id', (req, res) => {
-                //delete one product by its 'id' value
-                Pokemon.destroy({
-                        where: {
-                            id: req.params.id
-                        }
-                    })
-                    .then(Pokemon => {
-                        if (!Pokemon) {
-                            rs.status(404).json({
-                                message: 'No pokemon found with this id'
-                            });
-                            return;
-                        }
-                        res.json(Pokemon);
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        res.status(500).json(err)});
-                    });
-            });
+  //post
+  router.post('/', withAuth, (req, res) => {
+    Pokemon.create({
+      name: req.body.name,
+      height: req.body.height,
+      weight: req.body.weight,
+      front_default: req.body.front_default,
+      entry_number: req.body.entry_number,
+      user_id: req.session.user_id
+    })
+      .then(dbPokemonData => res.json(dbPokemonData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+  
+  router.put('/upvote', withAuth, (req, res) => {
+    Pokemon.upvote({ ...req.body, user_id: req.session.user_id }, { UserPokemon, Pokemon, User })
+      .then(updatedUserPokeData => res.json(updatedUserPokeData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+  
+  router.put('/:id', withAuth, (req, res) => {
+    Pokemon.update(
+      {
+        name: req.body.name
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(dbPokemonData => {
+        if (!dbPokemonData) {
+          res.status(404).json({ message: 'No Pokemon found with this id' });
+          return;
+        }
+        res.json(dbPokemonData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
-            module.exports = router;
+  //delete a pokemon
+  router.delete('/:id', (req, res) => {
+    Pokemon.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(dbPokemonData => {
+        if (!dbPokemonData) {
+          res.status(404).json({ message: 'No Pokemon found with this id' });
+          return;
+        }
+        res.json(dbPokemonData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+module.exports = router;

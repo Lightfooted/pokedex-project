@@ -1,5 +1,3 @@
-//Need to tinker with.
-
 async function loginFormHandler(event) {
     event.preventDefault();
   
