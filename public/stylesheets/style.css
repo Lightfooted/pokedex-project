@@ -1,76 +1,191 @@
 /* add stylizing here */
+
 * {
-    box-sizing: border-box;
-    background-color: black;
+	box-sizing: border-box;
+	background-color: black;
 }
 
-/* CSS Variables*/
+
+/* color variables*/
+
 :root {
-    /* main colors */
-    --red: #FF0000;
-    --Boston-university-red: #CC0000;
-    --cerulean-blue: #3B4CCA;
-    --golden-yellow: #FFDE00;
-    --gold-foil: #B3A125;
-    /* pokemon type colors */
-    --normal: #A8A77A;
-    --fire: #EE8130; 
-    --water: #6390F0; 
-    --electric: #F7D02C; 
-    --grass: #7AC74C;
-    --ice: #96D9D6; 
-    --fighting: #C22E28; 
-    --poison: #A33EA1; 
-    --ground: #E2BF65; 
-    --flying: #A98FF3; 
-    --psychic: #F95587; 
-    --bug: #A6B91A; 
-    --rock: #B6A136; 
-    --ghost: #735797; 
-    --dragon: #6F35FC; 
-    --dark: #705746; 
-    --steel: #B7B7CE; 
-    --fairy: #D685AD;
+	/* main colors */
+	--red: #FF0000;
+	--Boston-university-red: #CC0000;
+	--cerulean-blue: #3B4CCA;
+	--golden-yellow: #FFDE00;
+	--gold-foil: #B3A125;
+	/* pokemon type colors */
+	--normal: #A8A77A;
+	--fire: #EE8130;
+	--water: #6390F0;
+	--electric: #F7D02C;
+	--grass: #7AC74C;
+	--ice: #96D9D6;
+	--fighting: #C22E28;
+	--poison: #A33EA1;
+	--ground: #E2BF65;
+	--flying: #A98FF3;
+	--psychic: #F95587;
+	--bug: #A6B91A;
+	--rock: #B6A136;
+	--ghost: #735797;
+	--dragon: #6F35FC;
+	--dark: #705746;
+	--steel: #B7B7CE;
+	--fairy: #D685AD;
 }
 
-body,
-html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;    color: white;
+.topnav {
+	overflow: hidden;
+	background-color: black;
+	border: 1.5px solid white;
 }
 
-h2 {
-    font-family: pokemon solid;
+.topnav img {
+	width: 50px;
+	height: 30px;
+	margin: 0px;
 }
 
-.search-btn {
-    outline-color: white;
+.topnav a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
-.search-btn:hover {
- color: white;
+.topnav a:hover {
+	color: blue;
 }
 
-.bi-person-circle {
-    color: white;
+.topnav a.active {
+	color: white;
 }
 
-#container {
-    margin: auto;
+.topnav .search-container {
+	float: right;
 }
 
-#poke-container {
-    margin: auto;
-    width: 90%;
-    padding: 10px;
+.topnav input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
 }
 
-footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
+.topnav .search-container button {
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 13px;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	cursor: pointer;
+	background-color: white;
+	border-left: .5px solid black;
+}
+
+.account-btn {
+	width: 32px;
+	height: 32px;
+	margin: 0px;
+	color: blue;
+}
+
+.topnav .search-container button:hover {
+	background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+	.topnav .search-container {
+		float: none;
+	}
+	.topnav a,
+	.topnav input[type=text],
+	.topnav .search-container .account-btn button {
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	}
+	.topnav input[type=text] {
+		border: 1px solid #ccc;
+	}
+}
+
+body {
+	background-color: black;
+	color: white;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'poppins'sans-serif;
+	text-align: center;
+	font-size: 54px;
+}
+
+#pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	background-color: #f4f4f4;
+	color: #222;
+	text-align: center;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+}
+
+.card-image {
+	height: 180px;
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+	80% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
