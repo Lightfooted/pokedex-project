@@ -1,22 +1,9 @@
 <h1>Pokédex</h1>
 
-{{!--This is the card and info that will be pushed into main.handlebars. This displays pokemon characteristics and
-picture--}}
-<div id="pokedex">
-  <li class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Caught by: {{user.username}}</li>
-      <img class="card-img-top" src="{{front_default}}">
-      <h2 class="card-title">{{id}}. {{name}}</h2>
-      <p class="card-subtitle">Height: {{height}}</p>
-      <p class="card-subtitle">Weight: {{weight}}</p>
-      <p class="card-subtitle">Pokédex Entry: {{entry_number}}</p>
+<ol div="post-list">
+  {{#each pocketmonsters as |post|}}
+  <li>
+    {{> pokemon-info post }}
   </li>
-</div>
-
-{{!--this will play pokemon song on page load--}}
-<audio src="https://vgmsite.com/soundtracks/pokemon-gameboy-sound-collection/twanajhe/102-palette%20town%20theme.mp3"
-  id="my_audio" loop="loop"></audio>
-
-
- <script src="/javascript/homepage.js"></script>
+  {{/each}}
+</ol>

@@ -1,3 +1,5 @@
+{{!--This is the card and info that will be pushed into main.handlebars. This displays pokemon characteristics and
+picture--}}
 <div id="pokedex">
   <li class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
@@ -9,3 +11,10 @@
       <p class="card-subtitle">Pokédex Entry: {{entry_number}}</p>
   </li>
 </div>
+
+{{!--this will play pokemon song on page load--}}
+<audio src="https://vgmsite.com/soundtracks/pokemon-gameboy-sound-collection/twanajhe/102-palette%20town%20theme.mp3"
+  id="my_audio" loop="loop"></audio>
+
+
+ <script src="/javascript/homepage.js"></script>

@@ -1,27 +1,20 @@
-//Need to tinker with.
+// const signUpButton = document.getElementById('signUp');
+// const signInButton = document.getElementById('signIn');
+// const container = document.getElementById('container');
 
+// signUpButton.addEventListener('click', () => { 
+// 	container.classList.add("right-panel-active");
+// });
 
-//for sign in / create account form creates ghost animation 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+// signInButton.addEventListener('click', () => {
+// 	container.classList.remove("right-panel-active");
+// });
 
-signUpButton.addEventListener('click', () => { 
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-
-// 
 async function loginFormHandler(event) {
     event.preventDefault();
-    console.log("Hello")
+
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
-
-    console.log("email", email, "password", password)
   
     if (email && password) {
       const response = await fetch('/api/users/login', {
@@ -67,6 +60,6 @@ async function loginFormHandler(event) {
     }
   }
   
-  document.querySelector('.login-button').addEventListener('click', loginFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
-  document.querySelector('.signup-button').addEventListener('click', signupFormHandler);
+  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

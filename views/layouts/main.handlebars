@@ -21,9 +21,9 @@
     type="text/css" />
   {{!--css-stylesheet--}}
   <link rel="stylesheet" href="/stylesheets/style.css">
-  {{!--Link to JS file--}}
-  <script src="/js/index.js"></script>
 </head>
+
+ {{!--Restyle with same "quoted names--}} 
 
 <body>
   <div class="wrapper">
@@ -36,34 +36,31 @@
           <button type="submit">Submit</button>
         </div>
         <nav>
-          <div class="nav-section">
-            {{#if loggedIn}}
-            <a class="link-button" href="/dashboard"> <i class="fas fa-user-circle"></i> Dashboard</a>
-            {{/if}}
-          </div>
-          <div class="nav-section">
-            {{#if loggedIn}}
-            <a id="logout" href="/" class="link-button"> logout <i class="fas fa-sign-out-alt"></i> </a>
-            {{else}}
-            <a class="link-button" href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
-            {{/if}}
-          </div>
-        </nav>
+             {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      <p> Made by Kimberly Collazo and Brooke Madison </p>
+      Thanks for visiting!
     </footer>
   </div>
-
-
+  
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-  <script src="/javascript/login.js"></script>
+</body>
 
+</html>
+  {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
