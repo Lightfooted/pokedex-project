@@ -1,3 +1,36 @@
 {{!--Dashboard--}} 
 
-{{!--Nav info links for login, logout, search--}} 
+<section>
+  <h2>Find New Pokemon</h2>
+
+  <form class="new-pokemon-form">
+    <div>
+      <label for="title">Name of Pokemon</label>
+      <input type="text" id="name" name="name" />
+    </div>
+    <div>
+      <label for="front_default"></label>
+      <input id="front_default" name="front_default">
+      <input id="height" name="height" />
+      <input id="weight" name="weight" />
+      <input id="entry_number" name="entry_number" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if pocketmonsters.length}}
+<section>
+  <h2>Your Pokemon</h2>
+  <ol>
+    {{#each pocketmonsters as |post|}}
+    <li>
+      {{> pokemon-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit pokemon</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-pokemon.js"></script>

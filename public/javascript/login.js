@@ -40,7 +40,7 @@ async function loginFormHandler(event) {
       }
     }
   }
-  
+  //sign up form
   async function signupFormHandler(event) {
     event.preventDefault();
   
@@ -69,5 +69,4 @@ async function loginFormHandler(event) {
   
   document.querySelector('.login-button').addEventListener('click', loginFormHandler);
   
-  document.querySelector('.signup-button').addEventListener('click', signupFormHandler);  
-
+  document.querySelector('.signup-button').addEventListener('click', signupFormHandler);

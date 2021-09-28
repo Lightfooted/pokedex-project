@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
     include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username'],
+          as: 'collected_pokemon'
         }
     ]
   })
@@ -36,7 +37,8 @@ router.get('/', (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username'],
+          as: 'collected_pokemon'
         }
       ]
     })

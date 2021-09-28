@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Pokemon, User, UserPokemon } = require('../models');
+const { Pokemon, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -23,7 +23,8 @@ router.get('/', withAuth, (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username'],
+          as: 'collected_pokemon'
         }
       ]
     })
@@ -52,7 +53,8 @@ router.get('/', withAuth, (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username'],
+          as: 'collected_pokemon'
         }
       ]
     })
