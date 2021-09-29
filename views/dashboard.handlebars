@@ -21,9 +21,9 @@
 {{#if pocketmonsters.length}}
 <section>
   <h2>Your Pokemon</h2>
-  <ol>
+  <ol style="list-style-type:none;">
     {{#each pocketmonsters as |post|}}
-    <li>
+    <li style="list-style-type:none;">
       {{> pokemon-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit pokemon</a>
     </li>

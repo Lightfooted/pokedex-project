@@ -38,7 +38,7 @@ const pokedata = [
     name: 'Charmeleon',
     height: 11,
     weight: 190,
-    front_default: '"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png',
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png',
     entry_number: 5
   },
   {
