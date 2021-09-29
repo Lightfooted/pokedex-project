@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Pokemon, User, UserPokemon } = require('../models');
+const { Pokemon, User } = require('../models');
 
 // router.get('/', (req, res) => {
 //   res.render('homepage', {
@@ -40,20 +40,20 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPokemonData => {
-      const pocketmonsters = dbPokemonData.map(post => post.get({ plain: true }));
+      const pokemon = dbPokemonData.map(post => post.get({ plain: true }));
 
       res.render('homepage', {
-        pocketmonsters,
+        pokemon,
         loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
-      console.log(err);
+      console.log(dbPokemonData);
       res.status(500).json(err);
     });
 });
 
-// get single pokemon
+// get single pokemon. working correctly
 router.get('/pokemon/:id', (req, res) => {
   Pokemon.findOne({
     where: {
@@ -83,10 +83,10 @@ router.get('/pokemon/:id', (req, res) => {
         return;
       }
 
-      const post = dbPostData.get({ plain: true });
+      const pokemon = dbPokemonData.get({ plain: true });
 
       res.render('single-pokemon', {
-        post,
+        pokemon,
         loggedIn: req.session.loggedIn
       });
     })

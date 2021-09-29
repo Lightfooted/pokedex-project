@@ -72,15 +72,6 @@ router.get('/', (req, res) => {
       });
   });
   
-  router.put('/upvote', withAuth, (req, res) => {
-    Pokemon.upvote({ ...req.body, user_id: req.session.user_id }, { UserPokemon, Pokemon, User })
-      .then(updatedUserPokeData => res.json(updatedUserPokeData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
-  
   router.put('/:id', withAuth, (req, res) => {
     Pokemon.update(
       {

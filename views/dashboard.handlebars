@@ -4,19 +4,17 @@
   <h2>Find New Pokemon</h2>
 
   <form class="new-pokemon-form">
-    <div>
-      <label for="title">Name of Pokemon</label>
-      <input type="text" id="name" name="name" />
-    </div>
-    <div>
-      <label for="front_default"></label>
-      <input id="front_default" name="front_default">
-      <input id="height" name="height" />
-      <input id="weight" name="weight" />
-      <input id="entry_number" name="entry_number" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
+    <div class="post">
+  <li class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Caught by: {{user.username}}</li>
+      <img class="card-img-top" src="{{front_default}}">
+      <h2 class="card-title">{{id}}. {{name}}</h2>
+      <p class="card-subtitle">Height: {{height}}</p>
+      <p class="card-subtitle">Weight: {{weight}}</p>
+      <p class="card-subtitle">Pokédex Entry: {{entry_number}}</p>
+  </li>
+</div>
 </section>
 
 {{#if pocketmonsters.length}}
