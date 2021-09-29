@@ -118,12 +118,8 @@ h2 {
 }
 
 .homepage-title {
-	margin-top: 25px;
+	margin: 25px 45px;
 	text-align: center;
-}
-
-.homepage-title svg {
-background-color: white;
 }
 
 /* card styles.. This is where pokedex info shows up on homepage */

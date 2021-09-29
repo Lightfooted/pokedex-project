@@ -1,11 +1,11 @@
-<div class="homepage-title">
-  <h1>Pokédex</h1>
-</div>
+<div class="pokedex-container">
+  <h1 class="homepage-title">Pokédex</h1>
 
-<ol style="list-style-type:none;" div="post-list">
+<ol id="pokedex" style="list-style-type:none;" div="post-list">
   {{#each pocketmonsters as |post|}}
   <li style="list-style-type:none;" >
     {{> pokemon-info post }}
   </li>
   {{/each}}
 </ol>
+</div>
