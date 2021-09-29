@@ -29,23 +29,23 @@
   <div class="wrapper">
     <header>
       <div class="topnav">
-        <a class="active" href="/home"> <img
+        <img
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" /></a>
         <nav>
           {{#if loggedIn}}
-          <a href="/dashboard">dashboard</a>
-          <button id="logout" class="btn-no-style">logout</button>
+          <a href="/dashboard"> <i class="fas fa-user-circle"></i> dashboard</a>
+          <a href="/logout" id="logout"> <i class="fas fa-sign-out-alt"></i>logout</a>
           {{else}}
-          <a href="/login">login</a>
+          <a href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
           {{/if}}
         </nav>
+        </div>
     </header>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      <i class="fas fa-code code-symbol "></i>Made by Kimberly Collazo and Brooke Madison
-      <i class="fas fa-code code-symbol "></i>
+      <i class="fas fa-laptop-code code-symbol"></i>Made by Kimberly Collazo and Brooke Madison
     </footer>
   </div>
 
