@@ -29,3 +29,6 @@ async function newFormHandler(event) {
   }
   
   document.querySelector('.new-pokemon-form').addEventListener('submit', newFormHandler);
+
+
+const pokedex = document.getElementById('pokedex');

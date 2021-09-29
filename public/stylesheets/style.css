@@ -117,22 +117,35 @@ h2 {
 	color: white;
 }
 
+.homepage-title {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.homepage-title svg {
+background-color: white;
+}
+
 /* card styles.. This is where pokedex info shows up on homepage */
 #pokedex {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	grid-gap: 20px;
-	padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+}
+
+.pokedex-container { 
+	padding: 40px;
+    margin: 0 auto;
 }
 
 .card {
 	list-style: none;
 	padding: 40px;
-	margin: 60px;
 	background-color: black;
 	color: white;
 	text-align: center;
-	border: 1px solid #ccc;
+	border: 1px solid white;
 }
 
 .card:hover {
@@ -143,16 +156,14 @@ h2 {
 	text-transform: capitalize;
 	margin-bottom: 0px;
 	font-size: 32px;
-	font-weight: normal;
 }
 
 .card-subtitle {
 	margin-top: 5px;
 	color: #B7B7CE;
-	font-weight: lighter;
 }
 
-.card-image {
+.card-img-top {
 	height: 180px;
 }
 
