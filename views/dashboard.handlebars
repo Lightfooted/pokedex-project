@@ -1,19 +1,18 @@
 {{!--Dashboard--}} 
 
-<section>
+<section class="dashboard">
   <h2>Find New Pokemon</h2>
-
   <form class="new-pokemon-form">
     <div>
       <label for="title">Name of Pokemon</label>
-      <input type="text" id="name" name="name" />
+      <input type="text" id="name" name="name" placeholder="Name" />
     </div>
     <div>
       <label for="front_default"></label>
       <input id="front_default" name="front_default">
-      <input id="height" name="height" />
-      <input id="weight" name="weight" />
-      <input id="entry_number" name="entry_number" />
+      <input id="height" name="height" placeholder="Height"/>
+      <input id="weight" name="weight" placeholder="Weight"/>
+      <input id="entry_number" name="entry_number" placeholder="Entry Number"/>
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
