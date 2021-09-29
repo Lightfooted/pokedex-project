@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
- {{!--Restyle with same "quoted names--}} 
+{{!--Restyle with same "quoted names--}}
 
 <body>
   <div class="wrapper">
@@ -31,36 +31,33 @@
       <div class="topnav">
         <a class="active" href="/home"> <img
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" /></a>
-        <div class="search-container">
-          <input type="text" placeholder="Search For a Pokemon.." name="search">
-          <button type="submit">Submit</button>
-        </div>
         <nav>
-             {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+          {{#if loggedIn}}
+          <a href="/dashboard">dashboard</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      <i class="fas fa-code code-symbol "></i>Made by Kimberly Collazo and Brooke Madison
+      <i class="fas fa-code code-symbol "></i>
     </footer>
   </div>
-  
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
 
 </html>
-  {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-  {{/if}}
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>
