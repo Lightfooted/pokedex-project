@@ -30,7 +30,7 @@ router.get('/', withAuth, (req, res) => {
     })
       .then(dbPokemonData => {
         const pokemon = dbPokemonData.map(pokemon => pokemon.get({ plain: true }));
-        res.render('dashboard', { pokemon, loggedIn: true });
+        res.render('dashboard', { pokemon, loggedIn: true, username: req.session.username });
       })
       .catch(err => {
         console.log(err);

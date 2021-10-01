@@ -26,10 +26,10 @@ router.get('/', (req, res) => {
 });
 
   //get a single pokemon
-  router.get('/:id', (req, res) => {
+  router.get('/:name', (req, res) => {
     Pokemon.findOne({
       where: {
-        id: req.params.id
+        name: req.params.name
       },
       attributes: ['id', 'name', 'height', 'weight', 'front_default', 'entry_number', 'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM user_pokemon WHERE pokemon.id = user_pokemon.pokemon_id)'), 'collected_pokemon']
@@ -47,6 +47,7 @@ router.get('/', (req, res) => {
           res.status(404).json({ message: 'No Pokemon found with this id' });
           return;
         }
+        dbPokemonData.username = req.session.username
         res.json(dbPokemonData);
       })
       .catch(err => {

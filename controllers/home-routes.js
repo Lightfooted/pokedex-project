@@ -89,7 +89,7 @@ router.get('/pokemon/:name', (req, res) => {
 
       res.render('single-pokemon', {
         pokemon,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn, username: req.session.username
       });
     })
     .catch(err => {
