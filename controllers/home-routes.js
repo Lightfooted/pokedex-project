@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPokemonData => {
-      const pokemon = dbPokemonData.map(post => post.get({ plain: true }));
+      const pokemon = dbPokemonData.map(pokemon => pokemon.get({ plain: true }));
 
       res.render('homepage', {
         pokemon,
@@ -54,10 +54,10 @@ router.get('/', (req, res) => {
 });
 
 // get single pokemon. working correctly
-router.get('/pokemon/:id', (req, res) => {
+router.get('/pokemon/:name', (req, res) => {
   Pokemon.findOne({
     where: {
-      id: req.params.id
+      name: req.params.name
     },
     attributes: [
       'id',
@@ -79,11 +79,13 @@ router.get('/pokemon/:id', (req, res) => {
   })
     .then(dbPokemonData => {
       if (!dbPokemonData) {
-        res.status(404).json({ message: 'No Pokemon found with this id' });
+        res.status(404).json({ message: 'No Pokemon found with this name' });
         return;
       }
 
       const pokemon = dbPokemonData.get({ plain: true });
+
+      console.log(pokemon);
 
       res.render('single-pokemon', {
         pokemon,
