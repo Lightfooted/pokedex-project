@@ -6,11 +6,11 @@ class Pokemon extends Model {
   static(body, models) {
     return models.UserPokemon.create({
       user_id: body.user_id,
-      post_id: body.post_id
+      pokemon_id: body.pokemon_id
     }).then(() => {
       return Pokemon.findOne({
         where: {
-          id: body.post_id
+          id: body.pokemon_id
         },
         attributes: [
           'id',
