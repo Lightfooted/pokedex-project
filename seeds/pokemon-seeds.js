@@ -119,7 +119,8 @@ const pokedata = [
     height: 10,
     weight: 295,
     front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png',
-    entry_number: 15
+    entry_number: 15,
+    user_id: 1
   },
   {
     id: 16,
