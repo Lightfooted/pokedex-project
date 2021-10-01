@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Pokemon extends Model {
-  static upvote(body, models) {
+  static(body, models) {
     return models.UserPokemon.create({
       user_id: body.user_id,
       post_id: body.post_id
@@ -32,7 +32,7 @@ Pokemon.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false,
+      allowNull: true,
       autoIncrement: true
     },
     name: {
@@ -42,19 +42,19 @@ Pokemon.init(
     },
     height: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     weight: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     front_default: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     entry_number: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     user_id: {
       type: DataTypes.INTEGER,

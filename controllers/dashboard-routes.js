@@ -29,7 +29,7 @@ router.get('/', withAuth, (req, res) => {
       ]
     })
       .then(dbPokemonData => {
-        const pokemon = dbPokemonData.map(post => post.get({ plain: true }));
+        const pokemon = dbPokemonData.map(pokemon => pokemon.get({ plain: true }));
         res.render('dashboard', { pokemon, loggedIn: true });
       })
       .catch(err => {
@@ -60,10 +60,10 @@ router.get('/', withAuth, (req, res) => {
     })
       .then(dbPokemonData => {
         if (dbPokemonData) {
-          const post = dbPostData.get({ plain: true });
+          const pokemon = dbPokemonData.get({ plain: true });
           
           res.render('pokemon-info', {
-            post,
+            pokemon,
             loggedIn: true
           });
         } else {
