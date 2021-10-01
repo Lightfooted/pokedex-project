@@ -18,18 +18,4 @@
   </form>
 </section>
 
-{{#if pocketmonsters.length}}
-<section>
-  <h2>Your Pokemon</h2>
-  <ol style="list-style-type:none;">
-    {{#each pocketmonsters as |post|}}
-    <li style="list-style-type:none;">
-      {{> pokemon-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit pokemon</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
 <script src="/javascript/add-pokemon.js"></script>
