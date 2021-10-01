@@ -1,34 +1,29 @@
 {{!--Dashboard--}} 
 
 <section>
-  <h2>Find New Pokemon</h2>
+  <h2>Find Pokemon</h2>
 
   <form class="new-pokemon-form">
-    <div class="post">
-  <li class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Caught by: {{user.username}}</li>
-      <img class="card-img-top" src="{{front_default}}">
-      <h2 class="card-title">{{id}}. {{name}}</h2>
-      <p class="card-subtitle">Height: {{height}}</p>
-      <p class="card-subtitle">Weight: {{weight}}</p>
-      <p class="card-subtitle">Pokédex Entry: {{entry_number}}</p>
-  </li>
-</div>
+     <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" />
+    </div>
+    <button type="submit" class="btn">Search</button>
+  </form>
 </section>
 
-{{#if pocketmonsters.length}}
-<section>
-  <h2>Your Pokemon</h2>
-  <ol>
-    {{#each pocketmonsters as |post|}}
-    <li>
-      {{> pokemon-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit pokemon</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+   <article class="pokemon">
+     <div class="title">
+        <li class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="user-claim">Caught by: {{pokemon.user.username}}</li>
+            <img class="card-img-top" id="front-default" src="{{pokemon.front_default}}">
+            <h2 class="card-title" id="name">{{pokemon.id}}. {{pokemon.name}}</h2>
+            <p class="card-subtitle" id="height">Height: {{pokemon.height}}</p>
+            <p class="card-subtitle" id="weight">Weight: {{pokemon.weight}}</p>
+            <p class="card-subtitle" id="entry">Pokédex Entry: {{pokemon.entry_number}}</p>
+        </li>
+      </div>
+    </article>
 
-<script src="/javascript/add-pokemon.js"></script>
+<script src="/javascript/search-pokemon.js"></script>
