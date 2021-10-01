@@ -1,9 +1,9 @@
- //this function plays pokemon center music from original pokemon game 
+ //This function plays pokemon center music from original pokemon game 
  window.onload = function () {
     document.getElementById("my_audio").play();
   }
  
-  //fetches the pokeapi
+  //Fetches the pokeapi
   const pokedex = document.getElementById('pokedex');
  
   const fetchPokemon = () => {
@@ -40,3 +40,5 @@
   };
  
   fetchPokemon();
+
+  //TO-DO: Add weight and height

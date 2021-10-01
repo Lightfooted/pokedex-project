@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Pokemon, UserPokemon } = require('../../models');
 
-//get users
+//GET users
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//get one user
+//GET one user
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-//create account
+//Create Account
 router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
     });
 });
 
-//user login
+//User login
 router.post('/login', (req, res) => {
   User.findOne({
     where: {
@@ -98,7 +98,7 @@ router.post('/login', (req, res) => {
 });
 
 
-//logout user
+//Logout user
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -110,7 +110,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
-//user update
+//User update
 router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -131,7 +131,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-//delete user
+//DELETE user
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {

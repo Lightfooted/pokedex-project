@@ -1,14 +1,10 @@
-{{!--This is the card and info that will be pushed into main.handlebars. This displays pokemon characteristics and
-picture--}}
-POKEMONINFO
-
-    <article class="pokemon">
+<article class="pokemon">
      <div class="title">
         <li class="card" style="width: 18rem;">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Caught by: {{username}}</li>
             <img class="card-img-top" src="{{pokemon.front_default}}">
-            <h2 class="card-title">{{pokemon.id}}. {{pokemon.name}}</h2>
+            <h2 class="card-title">{{pokemon.id}} {{pokemon.name}}</h2>
             <p class="card-subtitle">Height: {{pokemon.height}}</p>
             <p class="card-subtitle">Weight: {{pokemon.weight}}</p>
             <p class="card-subtitle">Pokédex Entry: {{pokemon.entry_number}}</p>

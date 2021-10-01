@@ -1,4 +1,4 @@
-//login form
+//Login form
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -24,7 +24,7 @@ async function loginFormHandler(event) {
     }
   }
 }
-//sign up form
+//Sign up form
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -53,7 +53,7 @@ async function signupFormHandler(event) {
   }
 }
 
-//for login/signup form.. this creates ghost animation 
+//For login/signup form.. this creates ghost animation 
 const signUpButton = document.getElementById('signUp');
 const loginButton = document.getElementById('login');
 const container = document.getElementById('container');

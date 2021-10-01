@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection')
-const { Pokemon, User, UserPokemon } = require('../../models');
+const { Pokemon, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all Pokemon
+// GET all Pokemon
 router.get('/', (req, res) => {
     console.log('======================');
     Pokemon.findAll({
@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
   });
 });
 
-  //get a single pokemon
+  //GET a single pokemon
   router.get('/:name', (req, res) => {
     Pokemon.findOne({
       where: {
@@ -56,7 +56,7 @@ router.get('/', (req, res) => {
       });
   });
 
-  //post
+  //TO-DO: will be used to make a Pokemon (for fun)
   router.post('/', withAuth, (req, res) => {
     Pokemon.create({
       name: req.body.name,
@@ -97,7 +97,7 @@ router.get('/', (req, res) => {
       });
   });
 
-  //delete a pokemon
+  //DELETE a Pokemon TO-DO: Give the user the ability to remove Pokemon from favorites
   router.delete('/:id', (req, res) => {
     Pokemon.destroy({
       where: {

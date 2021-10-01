@@ -1,3 +1,4 @@
+//Search for Pokemon form
 async function newFormHandler(event) {
     event.preventDefault();
 

@@ -16,8 +16,6 @@ const { Pokemon, User } = require('../models');
 //   });
 // });
 
-//more test
-
 router.get('/', (req, res) => {
   console.log('======================');
   Pokemon.findAll({
@@ -53,7 +51,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// get single pokemon. working correctly
+// GET single Pokemon by name. Working correctly.
 router.get('/pokemon/:name', (req, res) => {
   Pokemon.findOne({
     where: {
@@ -98,7 +96,7 @@ router.get('/pokemon/:name', (req, res) => {
     });
 });
 
-//login
+//Login
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

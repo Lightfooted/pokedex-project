@@ -1,4 +1,4 @@
-/* add stylizing here */
+/* Add stylizing here */
 * {
 	box-sizing: border-box;
 }
@@ -48,7 +48,9 @@
 	margin-top: 6px;
 }
 
-.topnav a {
+.topnav a, .logout-btn {
+	background: none;
+	border: none;
 	float: right;
 	display: block;
 	color: white;
@@ -58,11 +60,11 @@
 	font-size: 17px;
 }
 
-.topnav a:hover {
+.topnav a:hover, .logout-btn:hover {
 	color: var(--red);
 }
 
-.topnav a.active {
+.topnav a.active, .logout-btn:active {
 	color: white;
 }
 
