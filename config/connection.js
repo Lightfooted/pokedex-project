@@ -12,7 +12,8 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_PW,
     {
       //Instead of 'local host' we'll be using the link below to connect to the deloyed site
-      host: 'td5l74lo6615qq42.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      //host: 'td5l74lo6615qq42.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      host: 'localhost',
       dialect: 'mysql',
       port: 3306,
     },

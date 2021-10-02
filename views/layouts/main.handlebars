@@ -16,35 +16,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  {{!--pokemon font--}}
-  <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet"
-    type="text/css" />
+  {{!--animate css--}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   {{!--css-stylesheet--}}
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="topnav">
-        <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg">        
-            <nav>
-          {{#if loggedIn}}
-          <a href="/dashboard"> <i class="fas fa-user-circle"></i> dashboard</a>
-          <button id="logout" class="btn-no-style logout-btn"><i class ="fas fa-sign-out-alt"></i>logout</button>
-          {{else}}
-          <a href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
-          {{/if}}
-        </nav>
-        </div>
-    </header>
-    <main>
+  <div class="topnav">
+  <div id="content-wrap" class="page-container">
+    <nav>
+      <a id="home-button" class="rotateIn" href="/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg">
+      </a>
+      {{#if loggedIn}}
+      <a href="/dashboard"> <i class="fas fa-user-circle"></i> dashboard</a>
+      <button id="logout" class="btn-no-style logout-btn"><i class="fas fa-sign-out-alt"></i>logout</button>
+      {{else}}
+      <a href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
+      {{/if}}
+    </nav>
+    </div>
+  </div>
+  </div>
+  </header>
+  <main>
+    <div class="page-container">
       {{{ body }}}
-    </main>
-    <footer>
-      <i class="fas fa-laptop-code code-symbol"></i>Made by Kimberly Collazo and Brooke Madison
+    </div>
+  </main>
+  <div class="fixed-footer">
+    <footer id="footer" class="page-container">
+      <i class="fas fa-laptop-code code-symbol animated swing animated-swing"></i> Made with <span
+        class="animated pulse"> ♥️ </span> by Kimberly Collazo and Brooke Madison
     </footer>
+  </div>
   </div>
 
   {{#if loggedIn}}
