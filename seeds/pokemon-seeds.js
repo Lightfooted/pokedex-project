@@ -681,6 +681,534 @@ const pokedata = [
     weight: 852,
     front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png',
     entry_number: 85
+  },
+  {
+    id: 86,
+    name: 'Seel',
+    height: 11,
+    weight: 900,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png',
+    entry_number: 86
+  },
+  {
+    id: 87,
+    name: 'Dewgong',
+    height: 17,
+    weight: 1200,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png',
+    entry_number: 87
+  },
+  {
+    id: 88,
+    name: 'Grimer',
+    height: 9,
+    weight: 300,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png',
+    entry_number: 88
+  },
+  {
+    id: 89,
+    name: 'Muk',
+    height: 12,
+    weight: 300,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png',
+    entry_number: 89
+  },
+  {
+    id: 90,
+    name: 'Shellder',
+    height: 3,
+    weight: 40,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png',
+    entry_number: 90
+  },
+  {
+    id: 91,
+    name: 'Cloyster',
+    height: 15,
+    weight: 1325,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png',
+    entry_number: 91
+  },
+  {
+    id: 92,
+    name: 'Gastly',
+    height: 13,
+    weight: 1,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png',
+    entry_number: 92
+  },
+  {
+    id: 93,
+    name: 'Haunter',
+    height: 16,
+    weight: 1,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png',
+    entry_number: 93
+  },
+  {
+    id: 94,
+    name: 'Gengar',
+    height: 15,
+    weight: 405,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png',
+    entry_number: 94
+  },
+  {
+    id: 95,
+    name: 'Onix',
+    height: 88,
+    weight: 2100,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png',
+    entry_number: 95
+  },
+  {
+    id: 96,
+    name: 'Drowzee',
+    height: 10,
+    weight: 324,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png',
+    entry_number: 96
+  },
+  {
+    id: 97,
+    name: 'Hypno',
+    height: 16,
+    weight: 756,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png',
+    entry_number: 97
+  },
+  {
+    id: 98,
+    name: 'Krabby',
+    height: 4,
+    weight: 65,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png',
+    entry_number: 98
+  },
+  {
+    id: 99,
+    name: 'Kingler',
+    height: 13,
+    weight: 600,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png',
+    entry_number: 99
+  },
+  {
+    id: 100,
+    name: 'Voltorb',
+    height: 5,
+    weight: 104,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png',
+    entry_number: 100
+  },
+  {
+    id: 101,
+    name: 'Electrode',
+    height: 12,
+    weight: 666,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png',
+    entry_number: 101
+  },
+  {
+    id: 102,
+    name: 'Exeggcute',
+    height: 4,
+    weight: 25,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png',
+    entry_number: 102
+  },
+  {
+    id: 103,
+    name: 'Exeggutor',
+    height: 20,
+    weight: 1200,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png',
+    entry_number: 103
+  },
+  {
+    id: 104,
+    name: 'Cubone',
+    height: 4,
+    weight: 65,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png',
+    entry_number: 104
+  },
+  {
+    id: 105,
+    name: 'Marowak',
+    height: 10,
+    weight: 450,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png',
+    entry_number: 105
+  },
+  {
+    id: 106,
+    name: 'Hitmonlee',
+    height: 15,
+    weight: 498,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png',
+    entry_number: 106
+  },
+  {
+    id: 107,
+    name: 'Hitmonchan',
+    height: 14,
+    weight: 502,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png',
+    entry_number: 107
+  },
+  {
+    id: 108,
+    name: 'Lickitung',
+    height: 12,
+    weight: 655,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png',
+    entry_number: 108
+  },
+  {
+    id: 109,
+    name: 'Koffing',
+    height: 6,
+    weight: 10,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png',
+    entry_number: 109
+  },
+  {
+    id: 110,
+    name: 'Weezing',
+    height: 12,
+    weight: 9,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png',
+    entry_number: 110
+  },
+  {
+    id: 111,
+    name: 'Rhyhorn',
+    height: 10,
+    weight: 1150,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png',
+    entry_number: 111
+  },
+  {
+    id: 112,
+    name: 'Rhydon',
+    height: 19,
+    weight: 1200,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png',
+    entry_number: 112
+  },
+  {
+    id: 113,
+    name: 'Chansey',
+    height: 11,
+    weight: 346,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png',
+    entry_number: 113
+  },
+  {
+    id: 114,
+    name: 'Tangela',
+    height: 10,
+    weight: 350,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png',
+    entry_number: 114
+  },
+  {
+    id: 115,
+    name: 'Kangaskhan',
+    height: 22,
+    weight: 800,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png',
+    entry_number: 115
+  },
+  {
+    id: 116,
+    name: 'Horsea',
+    height: 4,
+    weight: 80,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png',
+    entry_number: 116
+  },
+  {
+    id: 117,
+    name: 'Seadra',
+    height: 12,
+    weight: 250,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png',
+    entry_number: 117
+  },
+  {
+    id: 118,
+    name: 'Goldeen',
+    height: 6,
+    weight: 150,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png',
+    entry_number: 118
+  },
+  {
+    id: 119,
+    name: 'Seaking',
+    height: 13,
+    weight: 390,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png',
+    entry_number: 119
+  },
+  {
+    id: 120,
+    name: 'Staryu',
+    height: 8,
+    weight: 345,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png',
+    entry_number: 120
+  },
+  {
+    id: 121,
+    name: 'Starmie',
+    height: 11,
+    weight: 800,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png',
+    entry_number: 121
+  },
+  {
+    id: 122,
+    name: 'Mr-Mime',
+    height: 13,
+    weight: 545,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png',
+    entry_number: 122
+  },
+  {
+    id: 123,
+    name: 'Scyther',
+    height: 15,
+    weight: 560,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png',
+    entry_number: 123
+  },
+  {
+    id: 124,
+    name: 'Jynx',
+    height: 14,
+    weight: 406,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png',
+    entry_number: 124
+  },
+  {
+    id: 125,
+    name: 'Electabuzz',
+    height: 11,
+    weight: 300,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png',
+    entry_number: 125
+  },
+  {
+    id: 126,
+    name: 'Magmar',
+    height: 13,
+    weight: 445,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png',
+    entry_number: 126
+  },
+  {
+    id: 127,
+    name: 'Pinsir',
+    height: 15,
+    weight: 500,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png',
+    entry_number: 127
+  },
+  {
+    id: 128,
+    name: 'Tauros',
+    height: 14,
+    weight: 884,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png',
+    entry_number: 128
+  },
+  {
+    id: 129,
+    name: 'Magikarp',
+    height: 9,
+    weight: 100,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png',
+    entry_number: 129
+  },
+  {
+    id: 130,
+    name: 'Gyarados',
+    height: 65,
+    weight: 2350,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png',
+    entry_number: 130
+  },
+  {
+    id: 131,
+    name: 'Lapras',
+    height: 25,
+    weight: 2200,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png',
+    entry_number: 131
+  },
+  {
+    id: 132,
+    name: 'Ditto',
+    height: 3,
+    weight: 40,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png',
+    entry_number: 132
+  },
+  {
+    id: 133,
+    name: 'Eevee',
+    height: 3,
+    weight: 65,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png',
+    entry_number: 133
+  },
+  {
+    id: 134,
+    name: 'Vaporeon',
+    height: 10,
+    weight: 290,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png',
+    entry_number: 134
+  },
+  {
+    id: 135,
+    name: 'Jolteon',
+    height: 8,
+    weight: 245,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png',
+    entry_number: 135
+  },
+  {
+    id: 136,
+    name: 'Flareon',
+    height: 9,
+    weight: 250,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png',
+    entry_number: 136
+  },
+  {
+    id: 137,
+    name: 'Porygon',
+    height: 8,
+    weight: 365,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png',
+    entry_number: 137
+  },
+  {
+    id: 138,
+    name: 'Omanyte',
+    height: 4,
+    weight: 75,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png',
+    entry_number: 138
+  },
+  {
+    id: 139,
+    name: 'Omastar',
+    height: 10,
+    weight: 350,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png',
+    entry_number: 139
+  },
+  {
+    id: 140,
+    name: 'Kabuto',
+    height: 5,
+    weight: 115,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png',
+    entry_number: 140
+  },
+  {
+    id: 141,
+    name: 'Kabutops',
+    height: 13,
+    weight: 405,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png',
+    entry_number: 141
+  },
+  {
+    id: 142,
+    name: 'Aerodactyl',
+    height: 18,
+    weight: 590,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png',
+    entry_number: 142
+  },
+  {
+    id: 143,
+    name: 'Snorlax',
+    height: 21,
+    weight: 4600,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png',
+    entry_number: 143
+  },
+  {
+    id: 144,
+    name: 'Articuno',
+    height: 17,
+    weight: 554,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png',
+    entry_number: 144
+  },
+  {
+    id: 145,
+    name: 'Zapdos',
+    height: 16,
+    weight: 526,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png',
+    entry_number: 145
+  },
+  {
+    id: 146,
+    name: 'Moltres',
+    height: 20,
+    weight: 600,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png',
+    entry_number: 146
+  },
+  {
+    id: 147,
+    name: 'Dratini',
+    height: 18,
+    weight: 33,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png',
+    entry_number: 147
+  },
+  {
+    id: 148,
+    name: 'Dragonair',
+    height: 40,
+    weight: 165,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png',
+    entry_number: 148
+  },
+  {
+    id: 149,
+    name: 'Dragonite',
+    height: 22,
+    weight: 2100,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png',
+    entry_number: 149
+  },
+  {
+    id: 150,
+    name: 'Mewtwo',
+    height: 20,
+    weight: 1220,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png',
+    entry_number: 150
+  },
+  {
+    id: 151,
+    name: 'Mew',
+    height: 4,
+    weight: 40,
+    front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png',
+    entry_number: 151
   }
 ];
 
