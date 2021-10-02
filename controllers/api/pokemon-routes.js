@@ -56,7 +56,6 @@ router.get('/', (req, res) => {
       });
   });
 
-  //TO-DO: will be used to make a Pokemon (for fun)
   router.post('/', withAuth, (req, res) => {
     Pokemon.create({
       name: req.body.name,
