@@ -35,6 +35,8 @@ Audio.prototype.play = (function(play) {
       const pokemon = results.map((result) => ({
         name: result.name,
         image: result.sprites['front_default'],
+        height: result.height,
+        weight: result.weight,
         type: result.types.map((type) => type.type.name).join(', '),
         id: result.id
       }));
@@ -51,6 +53,8 @@ Audio.prototype.play = (function(play) {
              <img class="card-image" src="${pokeman.image}"/>
              <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
              <p class="card-subtitle">Type: ${pokeman.type}</p>
+             <p class="card-subtitle">Height: ${pokeman.height}</p>
+             <p class="card-subtitle">Weight: ${pokeman.weight}</p>
              </li>
      `
       )
