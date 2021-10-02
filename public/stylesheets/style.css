@@ -70,6 +70,19 @@
     padding: 10px 10px;
 }
 
+.rotateIn:hover {
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		 transform: rotate(0deg);
+	}
+	100% {
+		 transform: rotate(360deg);
+	}
+}
+
 .topnav a:hover,
 .logout-btn:hover {
     color: var(--red);

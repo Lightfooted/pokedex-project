@@ -1,7 +1,7 @@
  //This function plays pokemon center music from original pokemon game 
  window.onload = function () {
     document.getElementById("my_audio").play();
-    my_audio.volume = 0.08;
+    my_audio.volume = 0.03;
   }
  
 Audio.prototype.play = (function(play) {
