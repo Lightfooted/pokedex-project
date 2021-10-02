@@ -1,0 +1,62 @@
+<div class="container" id="container">
+  {{!--Sign in form--}}
+  <div class="form-container login-container">
+    <form class="login-form">
+      <h2>Sign In</h2>
+      <div>
+        <label for="email-login">email:</label>
+        <input type="text" id="email-login" placeholder="Email" />
+      </div>
+      <div>
+        <label for="password-login">password:</label>
+        <input type="password" id="password-login" placeholder="Password" />
+      </div>
+      <div>
+        <button class="login-button" type="submit">Login</button>
+      </div>
+  </div>
+  </form>
+
+  {{!--Signup form--}}
+  <div class="form-container sign-up-container">
+    <form class="signup-form">
+      <h2>Create Account</h2>
+      <span>Join the Pokémon Trainer Club!</span>
+      <div>
+        <label for="username-signup">username:</label>
+        <input type="text" id="username-signup" placeholder="Username" />
+      </div>
+      <div>
+        <label for="email-signup">email:</label>
+        <input type="text" id="email-signup" placeholder="Email" />
+      </div>
+      <div>
+        <label for="password-signup">password:</label>
+        <input type="password" id="password-signup" placeholder="Password" />
+      </div>
+      <div>
+        <button class="signup-button" type="submit">Sign Up</button>
+      </div>
+  </div>
+  </form>
+
+{{!--Login overlay--}}
+<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h2>Welcome, Trainer!</h2>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="login">Login</button>
+			</div>
+      {{!--Signup overlay--}}
+			<div class="overlay-panel overlay-right">
+				<h2>Hello, Trainer!</h2>
+				<p>Enter your personal details and join the Pokémon Trainer Club today!</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="/javascript/login.js"></script>

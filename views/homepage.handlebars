@@ -1,0 +1,23 @@
+<h1 class="homepage-title">Pokédex</h1>
+{{!--This is the card and info that will be pushed into main.handlebars. This displays pokemon characteristics and
+picture--}}
+<div id="pokedex">
+  <li class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Caught by: {{username}}</li>
+      <img class="card-img-top" src="{{front_default}}">
+      <h2 class="card-title">{{name}}</h2>
+      <p class="card-subtitle">Height: {{height}}</p>
+      <p class="card-subtitle">Weight: {{weight}}</p>
+      <p class="card-subtitle">Pokédex Entry: {{entry_number}}</p>
+  </li>
+</div>
+
+{{!--This will play pokemon song on page load--}}
+<audio src="https://vgmsite.com/soundtracks/pokemon-gameboy-sound-collection/xwvbnmtw/110-pokemon%20center.mp3"
+  id="my_audio" loop="loop"></audio>
+
+{{!--scroll to top button--}}
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+ <script src="/javascript/homepage.js"></script>
