@@ -1,8 +1,27 @@
  //This function plays pokemon center music from original pokemon game 
  window.onload = function () {
     document.getElementById("my_audio").play();
+    my_audio.volume = 0.08;
   }
  
+Audio.prototype.play = (function(play) {
+  return function () {
+    const audio = this,
+        args = arguments,
+        promise = play.apply(audio, args);
+    if (promise !== undefined) {
+      promise.catch(_ => {
+        // if autoplay was prevented, button to start playing.
+        const el = document.createElement("playButton");
+        el.innerHTML = "Play";
+        el.addEventListener("click", function(){play.apply(audio, args);});
+        this.parentNode.insertBefore(el, this.nextSibling)
+      });
+    }
+  };
+  })(Audio.prototype.play);
+
+
   //Fetches the pokeapi
   const pokedex = document.getElementById('pokedex');
  
