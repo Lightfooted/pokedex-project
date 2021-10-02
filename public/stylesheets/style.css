@@ -1,8 +1,6 @@
 /* Add stylizing here */
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
 }
 
 /* color variables*/
@@ -36,80 +34,89 @@
 
 /* navigation bar */
 .topnav {
-	overflow: hidden;
-	background-color: black;
-	border: 1.5px solid white;
+    width: 100%;
+    position: fixed;        
+    padding: 8px 0;
+    top: 0;
+    overflow: hidden;
+    background-color: black;
+    border: 1.5px solid white;
+	z-index: 1000;
 }
 
 .topnav img {
-	float: left;
-	display: block;
-	width: 50px;
-	height: 30px;
-	margin-top: 6px;
+    float: left;
+    display: block;
+    width: 50px;
+    height: 30px;
 }
 
 .topnav a,
 .logout-btn {
-	background: none;
-	border: none;
-	float: right;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 10px 10px;
-	text-decoration: none;
-	font-size: 17px;
+    background: none;
+    border: none;
+    float: right;
+    display: block;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 #home-button {
-	float: left
+    float: left;
+    padding: 10px 10px;
 }
 
 .topnav a:hover,
 .logout-btn:hover {
-	color: var(--red);
+    color: var(--red);
 }
 
 .topnav a.active,
 .logout-btn:active {
-	color: white;
+    color: white;
 }
 
 .account-btn {
-	width: 32px;
-	height: 32px;
-	margin: 0px;
-	color: black;
+    width: 32px;
+    height: 32px;
+    margin: 0px;
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
-	.topnav {
-		float: none;
-	}
+    .topnav {
+        float: none;
+    }
 
-	.topnav a,
-	.topnav input[type=text],
-	.topnav .account-btn button {
-		float: none;
-		display: block;
-		text-align: left;
-		width: 100%;
-		margin: 0;
-		padding: 14px;
-	}
+    .topnav a,
+    .topnav input[type=text],
+    .topnav .account-btn button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
 
-	.topnav input[type=text] {
-		border: 1px solid white;
-	}
+    .topnav input[type=text] {
+        border: 1px solid white;
+    }
 }
+
+
+
 
 /* overall font styles */
 body,
 html {
 	height: 100%;
-	padding: 0;
-	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 40px;
 	font-family: 'Poppins', sans-serif;
 	color: white;
 	background-color: black;
@@ -509,21 +516,24 @@ h2 {
 }
 
 /* footer styles */
-footer {
-	display: block;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border: 1px solid white;
-	display: flex;
-	justify-content: center;
-	font-size: 110%;
-	width: 100%;
-	position: relative;
+#page-container {
+	width: 80%;
+	margin: 0 auto;
 }
 
-#page-container {
-	position: relative;
-	min-height: 100vh;
+.fixed-footer {
+	width: 100%;
+	position: fixed;
+	border: 1px solid white;
+	background: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+}
+
+.fixed-footer {
+	bottom: 0;
+	text-align: center;
 }
 
 /* Footer height */

@@ -23,28 +23,34 @@
 </head>
 
 <body>
+  <div class="topnav">
   <div id="content-wrap" class="page-container">
-    <header>
-      <div class="topnav">
-        <a id="home-button" href="/">
+    <nav>
+      <a id="home-button" href="/">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg">
-        </a>
-        <nav>
-          {{#if loggedIn}}
-          <a href="/dashboard"> <i class="fas fa-user-circle"></i> dashboard</a>
-          <button id="logout" class="btn-no-style logout-btn"><i class="fas fa-sign-out-alt"></i>logout</button>
-          {{else}}
-          <a href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
-          {{/if}}
-        </nav>
-      </div>
-    </header>
-    <main>
+      </a>
+      {{#if loggedIn}}
+      <a href="/dashboard"> <i class="fas fa-user-circle"></i> dashboard</a>
+      <button id="logout" class="btn-no-style logout-btn"><i class="fas fa-sign-out-alt"></i>logout</button>
+      {{else}}
+      <a href="/login"> <i class="fas fa-sign-in-alt"></i> login</a>
+      {{/if}}
+    </nav>
+    </div>
+  </div>
+  </div>
+  </header>
+  <main>
+    <div class="page-container">
       {{{ body }}}
-    </main>
-    <footer id="footer">
-      <i class="fas fa-laptop-code code-symbol animated swing animated-swing"></i> Made with  <span class="animated pulse"> ♥️ </span> by Kimberly Collazo and Brooke Madison
+    </div>
+  </main>
+  <div class="fixed-footer">
+    <footer id="footer" class="page-container">
+      <i class="fas fa-laptop-code code-symbol animated swing animated-swing"></i> Made with <span
+        class="animated pulse"> ♥️ </span> by Kimberly Collazo and Brooke Madison
     </footer>
+  </div>
   </div>
 
   {{#if loggedIn}}
