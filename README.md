@@ -16,12 +16,18 @@ An online Pokédex that allows users to view and search for their favorite origi
 ## Link to Deployed Application 
 https://protected-hamlet-00069.herokuapp.com/
 
-## Screenshot
-<img width="800" alt="Screen Shot 2021-10-02 at 10 12 39 PM" src="https://user-images.githubusercontent.com/83384131/135737209-8df10609-471f-424c-91dd-a302b7d93738.png">
-<img width="800" alt="Screen Shot 2021-10-02 at 10 22 04 PM" src="https://user-images.githubusercontent.com/83384131/135737218-e87d581a-1813-4836-ad52-5f6e0735e25c.png">
-<img width="800" alt="Screen Shot 2021-10-02 at 10 21 26 PM" src="https://user-images.githubusercontent.com/83384131/135737221-1a634d51-d05c-43c5-ba73-45623d8d89b5.png">
-<img width="800" alt="Screen Shot 2021-10-02 at 10 21 51 PM" src="https://user-images.githubusercontent.com/83384131/135737227-133dd0b0-719b-4f14-bbff-97a5990366dc.png">
+## Screenshots
 
+## Homepage
+![screenshot](/screenshots/homepage-finalized.png)
+## Create Account
+![screenshot](/screenshots/create-account-finalized.png)
+## Login
+![screenshot](/screenshots/login-finalized.png)
+## Search Pokémon
+![screenshot](/screenshots/search-form-finalized.png)
+## Pokecard
+![screenshot](/screenshots/pokecard-finalized.png)
 
 ## Technologies Used
 * HTML
@@ -55,6 +61,15 @@ https://protected-hamlet-00069.herokuapp.com/
 
 ## Creator Notes
 
+ I wanted to describe the challenges we faced and offer advice for future coders.
+
+* The challenges:
+
+ Time. Time was a huge challenge. We had to rewrite a lot of our code due to unforeseen circumstances, were a two-person group, and had crazy work schedules. It was a lot to take in on such a short deadline.
+
+* My advice:
+
+ Don't fall behind on lessons and their assignments. They're SUPER helpful and will save you frustration in the long run. Don't be ashamed to go back on old material you aced on. Sometimes you forget how something worked and why and need to refresh your memory. Constant and clear communication with your team is a major key to success!
   
 ## Contributors
 * [Kimberly Collazo](http://github.com/Lightfooted) 
