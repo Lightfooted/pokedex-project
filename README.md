@@ -11,7 +11,7 @@
 * [Questions](#questions)
 
 ## Description:
-A simple online Pokédex that allows users to view and search their favorite of the original 151 pokémon. 
+An online Pokédex that allows users to view and search for their favorite original 151 Pokémon. The user MUST create an account first by username, email and password. The password MUST be at least 10 characters long. Once logged in, the user is then sent to the dashboard where they are presented with a search form. In this form they may type in the name of any of the original 151 Pokémon. Once the data is sent, the result brings up a card. The Pokémon stats will display along with the username written on the card. Congratulations! You caught your first Pokémon! To do another search simply click on the dashboard button. When you've finished your hunt, you may hit the logout button!
 
 ## Link to Deployed Application 
 https://protected-hamlet-00069.herokuapp.com/
@@ -44,7 +44,7 @@ https://protected-hamlet-00069.herokuapp.com/
 
 ## Future Updates and Features
 * Implement Passport.js to protect routes 
-* Give the user the ability to favorite and delete their pokémon 
+* Give the user the ability to delete and favorite multiple Pokémon 
 * Animate Sprites
 * Add Isotope, a library that will allow users to filter & sort pokémon in a fun way 
 
@@ -66,4 +66,3 @@ Have any questions or need further assistance with the project?
 Contact Us:
 * Email Kimberly: vesselofbalance@hotmail.com
 * Email Brooke: brookemadisondesign@gmail.com
-  
