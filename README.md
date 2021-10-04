@@ -20,6 +20,10 @@ https://protected-hamlet-00069.herokuapp.com/
 
 ## Homepage
 ![screenshot](/screenshots/homepage-finalized.png)
+## Audio
+![screenshot](/screenshots/audio.png)
+###
+ Our homepage plays audio but it may already be disabled on your web browser! Simply click on the lock near the URL and give permission as shown in the screenshot!
 ## Create Account
 ![screenshot](/screenshots/create-account-finalized.png)
 ## Login
